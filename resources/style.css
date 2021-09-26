@@ -7,7 +7,7 @@ font-family: 'proppins', sans-serif;
 }
 
 .hero{
-background-image:url(/resources/backImagetitle.png);
+background-image:url(backImagetitle.png);
 min-height: 100vh;
 }
 

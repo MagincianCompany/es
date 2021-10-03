@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-us">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | DandoVueltas</title>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Export.json");
-    </script>
-  </head>
+<html>
+	<head>
 
-  <body>
-    <div style="height:20px; width: 1280px; background: green;" onclick="unityInstance.SetFullscreen(1)"><b>Click here to make it full screen.</b></div>
-    <div id="unityContainer" style="width: 1280px; height: 720px; margin: auto"></div>
-  </body>
+		<!-- Product name as page title -->
+		<title>%UNITY_WEB_NAME%</title>
+
+		<!-- Page Styling -->
+		<style type="text/css">
+		body
+		{
+			margin:0;
+			width: 100vw;
+			height: 100vh;
+			/*Change this to change player background color*/
+			background: #000;
+		}	
+
+		canvas 
+		{
+        	width: 100%;
+        	height: 100%;
+        	display: block;
+      	}
+
+		</style>
+
+	</head>
+
+
+	<!-- The whole body is used as the game container and canvas within -->
+	<body id="gameContainer"></body>
+
+	<!-- UnityLoader.js is enqueued here -->
+	<script src="%UNITY_WEBGL_LOADER_URL%"></script>
 
 </html>
